@@ -645,7 +645,7 @@
                 "filter": {
                     "type": "String",
                     "required": false,
-                    "validation": "^(assigned|created|mentioned|subscribed)$",
+                    "validation": "^(assigned|created|mentioned||subscribed)$",
                     "invalidmsg": "",
                     "description": ""
                 },
@@ -2572,6 +2572,14 @@
             "params": {
                 "$page": null,
                 "$per_page": null
+            }
+        },
+
+        "get-keys-from-user": {
+            "url": "/users/:user/keys",
+            "method": "GET",
+            "params": {
+                "$user": null
             }
         },
 
